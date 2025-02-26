@@ -1,50 +1,36 @@
-# React + TypeScript + Vite
+# Coffeeroasters Subscription Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tech Stack
 
-Currently, two official plugins are available:
+- UI: React 19, Tailwind v4, Shadcn
+- Router: React Router v7 (as a library)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Feature List
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- If "Capsule" is selected for the first option
+  - The "Want us to grind them?" section should be disabled and not able to be opened
+- Order summary texts updates
+  - If "Capsule" is selected, update the order summary text to:
+    - "I drink my coffee **using** Capsules"
+    - Remove the grind selection text
+  - If "Filter" or "Espresso" are selected, update the order summary text to:
+    - "I drink my coffee **as** Filter||Espresso"
+    - Keep/Add the grind selection text
+  - For all other selections, add the selection title in the blank space where appropriate
+- Updating per shipment price (shown in "How often should we deliver?" section at the bottom) based on weight selected
+  - If 250g weight is selected
+    - Every Week price per shipment is $7.20
+    - Every 2 Weeks price per shipment is $9.60
+    - Every Month price per shipment is $12.00
+  - If 500g weight is selected
+    - Every Week price per shipment is $13.00
+    - Every 2 Weeks price per shipment is $17.50
+    - Every Month price per shipment is $22.00
+  - If 1000g weight is selected
+    - Every Week price per shipment is $22.00
+    - Every 2 Weeks price per shipment is $32.00
+    - Every Month price per shipment is $42.00
+- Calculating per month cost for the Order Summary modal
+  - If Every Week is selected, the Order Summary modal should show the per shipment price multiplied by 4. For example, if 250g weight is selected, the price would be $28.80/month
+  - If Every 2 Weeks is selected, the Order Summary modal should show the per shipment price multiplied by 2. For example, if 250g weight is selected, the price would be $19.20/month
+  - If Every Month is selected, the Order Summary modal should show the per shipment price multiplied by 1. For example, if 250g weight is selected, the price would be $12.00/month
