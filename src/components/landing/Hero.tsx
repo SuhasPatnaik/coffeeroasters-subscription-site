@@ -1,10 +1,9 @@
 export default function Hero() {
   return (
     <div
-      className="grid place-items-center text-center px-4 bg-no-repeat bg-cover bg-center rounded-xl max-h-[500px]"
+      className="grid place-items-center text-center px-4 bg-no-repeat bg-cover bg-center rounded-xl h-[80vh]"
       style={{
         backgroundImage: `URL("/images/home/mobile/image-hero-coffeepress.jpg")`,
-        objectFit: "contain",
       }}
     >
       <div className="flex flex-col gap-8">
