@@ -2,7 +2,7 @@
 
 ## Tech Stack
 
-- UI: React 19, Tailwind v4, Shadcn
+- UI: React 19, Tailwind v4
 - Router: React Router v7 (as a library)
 
 ## Feature List
