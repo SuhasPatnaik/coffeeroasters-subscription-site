@@ -1,3 +1,9 @@
+import Hero from "../landing/Hero";
+
 export default function LandingPage() {
-  return <div>LandingPage</div>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 }

@@ -28,6 +28,8 @@
   --text-nav--line-height: 0.9375rem;
   --text-nav--font-family: "Barlow", sans-serif;
   --text-nav--font-weight: 700;
+
+  --font-heading: "Fraunces", serif;
 }
 
 body {
@@ -35,4 +37,5 @@ body {
   line-height: 1.625rem;
   font-family: "Barlow", sans-serif;
   font-weight: 400;
+  color: var(--color-neutral-200);
 }
