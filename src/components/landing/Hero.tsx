@@ -1,3 +1,5 @@
+import Button from "../shared/Button";
+
 export default function Hero() {
   return (
     <div
@@ -13,9 +15,7 @@ export default function Hero() {
           curated artisan coffees from our best roasters delivered directly to
           your door, at your schedule.
         </p>
-        <button className="font-heading bg-primary-accent text-h4 px-8 py-4 rounded-lg self-center cursor-pointer">
-          Create your plan
-        </button>
+        <Button>Create your plan</Button>
       </div>
     </div>
   );

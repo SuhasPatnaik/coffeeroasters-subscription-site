@@ -15,10 +15,8 @@ export default function WhyChooseUs() {
           </p>
         </div>
         <div className="relative w-full">
-          {/* Gray background with percentage-based height - adjusts with container */}
           <div className="absolute top-0 left-0 right-0 h-[50%] bg-gray-800 lg:h-[55%]"></div>
 
-          {/* Cards section with padding */}
           <div className="relative pt-10 px-6 z-10 lg:flex lg:flex-row lg:gap-8">
             {reasonsList.map((reason, index) => (
               <div
