@@ -4,7 +4,7 @@ export default function OurCommitment() {
       <img
         src="/images/about/mobile/image-commitment.jpg"
         alt="Barista making latte art as a sign of commitment to customer service"
-        className="rounded-xl"
+        className="rounded-xl mb-4"
       />
       <h1 className="font-heading text-h3 text-neutral-900">Our commitment</h1>
       <p className="text-neutral-900">
