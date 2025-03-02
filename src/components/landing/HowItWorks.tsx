@@ -4,7 +4,7 @@ import Button from "../shared/Button";
 export default function HowItWorks() {
   return (
     <>
-      <h1 className="font-heading text-neutral-400 text-center text-h3">
+      <h1 className="font-heading text-neutral-500 text-center text-h3">
         How it works?
       </h1>
       {stepsList.map((step, index) => {
