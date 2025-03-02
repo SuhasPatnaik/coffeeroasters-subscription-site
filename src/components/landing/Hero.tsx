@@ -3,7 +3,7 @@ import Button from "../shared/Button";
 export default function Hero() {
   return (
     <div
-      className="grid place-items-center text-center px-4 bg-no-repeat bg-cover bg-center rounded-xl h-[80vh]"
+      className="grid place-items-center text-center px-4 bg-no-repeat bg-cover bg-center rounded-xl min-h-[80vh]"
       style={{
         backgroundImage: `URL("/images/home/mobile/image-hero-coffeepress.jpg")`,
       }}
