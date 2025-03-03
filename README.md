@@ -5,7 +5,7 @@
 - UI: React 19, Tailwind v4
 - Router: React Router v7 (as a library)
 
-## Feature List
+## Requirements Doc
 
 - If "Capsule" is selected for the first option
   - The "Want us to grind them?" section should be disabled and not able to be opened
