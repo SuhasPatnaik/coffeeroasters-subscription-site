@@ -36,7 +36,7 @@ export default function Accordion({ preference }) {
               className="bg-gray-200 text-neutral-900 rounded-md py-8 px-6 flex flex-col gap-2 text-left cursor-pointer hover:bg-secondary-accent focus:bg-primary-accent focus:text-neutral-200"
             >
               <h2 className="font-heading text-h4">{option.name}</h2>
-              <p className="">{option.description}</p>
+              <p>{option.description}</p>
             </button>
           );
         })}

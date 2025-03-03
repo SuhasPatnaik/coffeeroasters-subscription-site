@@ -119,7 +119,7 @@ export const preferenceMenu = [
           "Just like regular coffee, except the caffeine has been removed",
       },
       {
-        name: "Belnded",
+        name: "Blended",
         description:
           "Combination of two or three dark roasted beans of organic coffees",
       },

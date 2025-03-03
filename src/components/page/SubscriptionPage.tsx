@@ -2,6 +2,7 @@ import { useLocation } from "react-router";
 import Steps from "../shared/Steps";
 import Hero from "../subscribe/Hero";
 import PreferenceQuestionnaire from "../subscribe/PreferenceQuestionnaire";
+import OrderSummary from "../subscribe/OrderSummary";
 
 export default function SubscriptionPage() {
   const location = useLocation();
@@ -12,6 +13,7 @@ export default function SubscriptionPage() {
       <Hero />
       <Steps isDarkTheme={isDarkTheme} />
       <PreferenceQuestionnaire />
+      <OrderSummary />
     </div>
   );
 }
