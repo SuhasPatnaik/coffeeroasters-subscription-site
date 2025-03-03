@@ -3,10 +3,10 @@ import Accordion from "./Accordion";
 
 export default function PreferenceQuestionnaire() {
   return (
-    <div>
+    <div className="flex flex-col gap-8">
       {preferenceMenu.map((preference, index) => {
         return (
-          <div key={index}>
+          <div key={index} className="flex flex-col gap-6">
             <Accordion preference={preference} />
           </div>
         );
