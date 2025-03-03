@@ -1,6 +1,7 @@
 import Hero from "../about/Hero";
 import OurCommitment from "../about/OurCommitment";
 import Quality from "../about/Quality";
+import Headquarters from "../about/Headquarters";
 
 export default function AboutUsPage() {
   return (
@@ -8,6 +9,7 @@ export default function AboutUsPage() {
       <Hero />
       <OurCommitment />
       <Quality />
+      <Headquarters />
     </div>
   );
 }

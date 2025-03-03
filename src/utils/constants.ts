@@ -66,3 +66,21 @@ export const stepsList = [
       "We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.",
   },
 ];
+
+export const hqLocations = [
+  {
+    name: "United Kingdom",
+    address: "68 Asfordby Rd, Alcaston, SY6 1YA, +44 1241 918425",
+    imgUrl: "/images/about/desktop/illustration-uk.svg",
+  },
+  {
+    name: "Canada",
+    address: "1528  Eglinton Avenue, Toronto, Ontario M4P 1A6, +1 416 485 2997",
+    imgUrl: "/images/about/desktop/illustration-canada.svg",
+  },
+  {
+    name: "Australia",
+    address: "36 Swanston Street, Kewell, Victoria, +61 4 9928 3629",
+    imgUrl: "/images/about/desktop/illustration-australia.svg",
+  },
+];
