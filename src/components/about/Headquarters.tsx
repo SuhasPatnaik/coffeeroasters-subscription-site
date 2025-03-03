@@ -12,9 +12,9 @@ export default function Headquarters() {
               alt={`${location.name} country outline respresentation`}
               className="inline-block my-10"
             />
-            <h1 className="font-heading text-h3 text-neutral-900 mb-6">
+            <h3 className="font-heading text-h3 text-neutral-900 mb-6">
               {location.name}
-            </h1>
+            </h3>
             <div className="flex flex-col gap-1">
               {location.address.split(",").map((addressSplit, index) => {
                 return (
