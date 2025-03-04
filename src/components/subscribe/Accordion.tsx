@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ExpandingBorderButton from "./ExpandingBorderButton";
 
 export default function Accordion({
   preference,
@@ -14,10 +15,7 @@ export default function Accordion({
 
   return (
     <>
-      <button
-        className="flex justify-between w-full cursor-pointer items-center"
-        onClick={handleQuestionClick}
-      >
+      <ExpandingBorderButton onClick={handleQuestionClick}>
         <h1 className="font-heading text-h4 text-neutral-500 w-56 text-left">
           {preference.question}
         </h1>
@@ -30,7 +28,7 @@ export default function Accordion({
             }`}
           />
         </div>
-      </button>
+      </ExpandingBorderButton>
       {expandAccordion &&
         preference.options.map((option, index) => {
           return (
