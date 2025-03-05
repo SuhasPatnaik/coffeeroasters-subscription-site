@@ -14,7 +14,7 @@ export default function PreferenceQuestionnaire({
             preference={preference}
             onOptionClick={onOptionClick}
             selectedMenuIndex={index}
-            selectedOptionIndex={selectedOptions[index] ?? null}
+            selectedOptionIndex={selectedOptions[index]?.optionIndex ?? null}
           />
         );
       })}

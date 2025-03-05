@@ -39,7 +39,9 @@ export default function Accordion({
                   ? "bg-primary-accent text-neutral-200"
                   : "bg-gray-200 hover:bg-secondary-accent text-neutral-900"
               }`}
-              onClick={() => onOptionClick(selectedMenuIndex, index)}
+              onClick={() =>
+                onOptionClick(selectedMenuIndex, index, option.name)
+              }
             >
               <h2 className="font-heading text-h4">{option.name}</h2>
               <p>{option.description}</p>
