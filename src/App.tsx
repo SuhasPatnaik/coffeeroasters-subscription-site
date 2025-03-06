@@ -4,10 +4,12 @@ import AboutUsPage from "./components/page/AboutUsPage";
 import SubscriptionPage from "./components/page/SubscriptionPage";
 import PageNotFound from "./components/page/PageNotFound";
 import PageLayout from "./components/shared/PageLayout";
+import ScrollToTop from "./components/shared/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route element={<PageLayout />}>
           <Route path="/" element={<LandingPage />} />
