@@ -2,7 +2,7 @@ import Button from "../shared/Button";
 
 export default function Hero() {
   return (
-    <div
+    <section
       className="grid place-items-center text-center px-4 bg-no-repeat bg-cover bg-center rounded-xl min-h-[80vh]"
       style={{
         backgroundImage: `URL("/images/home/mobile/image-hero-coffeepress.jpg")`,
@@ -17,6 +17,6 @@ export default function Hero() {
         </p>
         <Button>Create your plan</Button>
       </div>
-    </div>
+    </section>
   );
 }

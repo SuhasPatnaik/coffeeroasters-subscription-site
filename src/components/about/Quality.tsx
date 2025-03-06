@@ -1,6 +1,6 @@
 export default function Quality() {
   return (
-    <div className="bg-neutral-900 text-center mt-24 rounded-xl px-16 relative">
+    <section className="bg-neutral-900 text-center mt-24 rounded-xl px-16 relative">
       <img
         src="/images/about/mobile/image-quality.jpg"
         alt="A white cup of coffee with aesthetic latte art"
@@ -17,6 +17,6 @@ export default function Quality() {
         to roast consistent, user-friendly coffee, so that brewing is easy and
         enjoyable.
       </p>
-    </div>
+    </section>
   );
 }

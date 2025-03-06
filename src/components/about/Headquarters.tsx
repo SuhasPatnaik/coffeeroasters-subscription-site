@@ -2,7 +2,7 @@ import { hqLocations } from "../../utils/constants";
 
 export default function Headquarters() {
   return (
-    <div className="grid place-content-center place-items-center">
+    <section className="grid place-content-center place-items-center">
       <p className="font-heading text-h4 text-neutral-500">Our Headquarters</p>
       {hqLocations.map((location, index) => {
         return (
@@ -27,6 +27,6 @@ export default function Headquarters() {
           </div>
         );
       })}
-    </div>
+    </section>
   );
 }

@@ -6,7 +6,7 @@ export default function PreferenceQuestionnaire({
   selectedOptions,
 }) {
   return (
-    <div className="flex flex-col gap-8">
+    <section className="flex flex-col gap-8">
       {preferenceMenu.map((preference, index) => {
         return (
           <Accordion
@@ -18,6 +18,6 @@ export default function PreferenceQuestionnaire({
           />
         );
       })}
-    </div>
+    </section>
   );
 }

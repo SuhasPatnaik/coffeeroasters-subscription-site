@@ -19,7 +19,7 @@ export default function SubscriptionPage() {
   };
 
   return (
-    <div className="py-10 flex flex-col gap-24">
+    <main className="py-10 flex flex-col gap-24">
       <Hero />
       <Steps isDarkTheme={isDarkTheme} />
       <PreferenceQuestionnaire
@@ -27,6 +27,6 @@ export default function SubscriptionPage() {
         selectedOptions={selectedOptions}
       />
       <OrderSummary selectedPreferences={selectedOptions} />
-    </div>
+    </main>
   );
 }

@@ -5,11 +5,11 @@ import Headquarters from "../about/Headquarters";
 
 export default function AboutUsPage() {
   return (
-    <div className="py-10 flex flex-col gap-24">
+    <main className="py-10 flex flex-col gap-24">
       <Hero />
       <OurCommitment />
       <Quality />
       <Headquarters />
-    </div>
+    </main>
   );
 }

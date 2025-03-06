@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <div
+    <section
       className="grid place-items-center text-center px-4 bg-no-repeat bg-cover bg-center rounded-xl min-h-[60vh]"
       style={{
         backgroundImage: `URL("/images/about/mobile/image-hero-whitecup.jpg")`,
@@ -15,6 +15,6 @@ export default function Hero() {
           shipment.
         </p>
       </div>
-    </div>
+    </section>
   );
 }

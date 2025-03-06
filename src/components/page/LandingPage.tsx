@@ -5,11 +5,11 @@ import WhyChooseUs from "../landing/WhyChooseUs";
 
 export default function LandingPage() {
   return (
-    <div className="py-10 flex flex-col gap-20">
+    <main className="py-10 flex flex-col gap-20">
       <Hero />
       <Collection />
       <WhyChooseUs />
       <HowItWorks />
-    </div>
+    </main>
   );
 }

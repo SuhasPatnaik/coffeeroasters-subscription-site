@@ -1,6 +1,6 @@
 export default function OurCommitment() {
   return (
-    <div className="flex flex-col items-center text-center gap-8">
+    <section className="flex flex-col items-center text-center gap-8">
       <img
         src="/images/about/mobile/image-commitment.jpg"
         alt="Barista making latte art as a sign of commitment to customer service"
@@ -20,6 +20,6 @@ export default function OurCommitment() {
         to highlight tasting profiles distinctive to their native growing
         region.
       </p>
-    </div>
+    </section>
   );
 }

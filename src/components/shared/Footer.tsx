@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="mt-auto bg-neutral-900 text-center py-12">
+    <footer className="mt-auto bg-neutral-900 text-center py-12">
       <img
         src="/images/shared/desktop/logo-light.svg"
         alt="Coffee Roasters brand logo"
@@ -25,6 +25,6 @@ export default function Footer() {
           alt="Instagram profile url icon"
         />
       </div>
-    </div>
+    </footer>
   );
 }

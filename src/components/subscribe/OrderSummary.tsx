@@ -13,7 +13,7 @@ export default function OrderSummary({ selectedPreferences }) {
   const isCapsule = selectedPreferences?.[0]?.optionName === "Capsule";
 
   return (
-    <div>
+    <section>
       <div
         className="rounded-lg py-10 px-8"
         style={{
@@ -35,6 +35,6 @@ export default function OrderSummary({ selectedPreferences }) {
       <div className="text-center my-16">
         <Button>Create my plan!</Button>
       </div>
-    </div>
+    </section>
   );
 }
