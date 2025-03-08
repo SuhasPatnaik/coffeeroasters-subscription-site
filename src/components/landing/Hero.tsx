@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router";
 import Button from "../shared/Button";
 
 export default function Hero() {
+  let navigate = useNavigate();
+
   return (
     <section
       className="grid place-items-center text-center px-4 bg-no-repeat bg-cover bg-center rounded-xl min-h-[80vh]"
@@ -15,7 +18,7 @@ export default function Hero() {
           curated artisan coffees from our best roasters delivered directly to
           your door, at your schedule.
         </p>
-        <Button>Create your plan</Button>
+        <Button onClick={() => navigate("/subscribe")}>Create your plan</Button>
       </div>
     </section>
   );
