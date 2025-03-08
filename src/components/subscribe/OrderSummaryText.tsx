@@ -1,5 +1,5 @@
 export default function OrderSummaryText({ selectedPreferences }) {
-  console.log(selectedPreferences?.[0]?.optionName);
+  console.log(selectedPreferences);
   const getPreferenceText = (index) =>
     selectedPreferences?.[index] ? (
       <span className="text-primary-accent inline-block">
