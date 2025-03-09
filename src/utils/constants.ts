@@ -170,17 +170,29 @@ export const preferenceMenu = [
       {
         name: "Every week",
         description: "$7.20 per shipment. Includes free first-class shipping.",
-        subscriptionCost: "28.80",
+        subscriptionCost: {
+          quarter: "28.80",
+          half: "52.00",
+          full: "88.00",
+        },
       },
       {
         name: "Every 2 weeks",
         description: "$9.60 per shipment. Includes free priority shipping.",
-        subscriptionCost: "19.20",
+        subscriptionCost: {
+          quarter: "19.20",
+          half: "35.00",
+          full: "22.00",
+        },
       },
       {
         name: "Every month",
         description: "$12.00 per shipment. Includes free priority shipping.",
-        subscriptionCost: "12.00",
+        subscriptionCost: {
+          quarter: "12.00",
+          half: "22.00",
+          full: "42.00",
+        },
       },
     ],
   },
