@@ -6,7 +6,7 @@ export default function Collection() {
       <h1 className="font-heading text-h2 bg-linear-to-b from-neutral-900 via-neutral-500 to-neutral-200 bg-clip-text text-transparent md:text-title leading-none">
         our collection
       </h1>
-      <div className="md:flex">
+      <div className="md:flex md:px-36">
         {collectionList.map((collection, index) => {
           return (
             <div className="flex flex-col gap-4 mt-12 md:-mt-12" key={index}>

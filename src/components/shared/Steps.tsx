@@ -7,7 +7,7 @@ interface StepsProps {
 export default function Steps({ isDarkTheme }: StepsProps) {
   return (
     <div
-      className={`flex flex-col gap-16 px-4 ${
+      className={`flex flex-col md:flex-row gap-16 px-4 md:gap-0 ${
         isDarkTheme
           ? "bg-neutral-900 text-neutral-200 rounded-xl py-20"
           : "text-neutral-900"
@@ -17,7 +17,9 @@ export default function Steps({ isDarkTheme }: StepsProps) {
         return (
           <div
             key={index}
-            className={`grid place-items-center text-center gap-y-4 `}
+            className={`grid place-items-center text-center gap-y-4 md:place-items-start md:text-left ${
+              index < 2 && "md:border-t-2 md:border-secondary-accent"
+            }`}
           >
             <p className="font-heading text-h1 text-secondary-accent">
               {step.number}
