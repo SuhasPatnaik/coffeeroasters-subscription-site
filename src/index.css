@@ -39,3 +39,7 @@ body {
   font-weight: 400;
   color: var(--color-neutral-200);
 }
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1); /* Light outline */
+}

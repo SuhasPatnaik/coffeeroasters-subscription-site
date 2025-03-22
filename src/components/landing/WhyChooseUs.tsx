@@ -3,19 +3,19 @@ import { reasonsList } from "../../utils/constants";
 export default function WhyChooseUs() {
   return (
     <section className="grid place-items-center text-center">
-      {/* Main container */}
-      <div className="bg-neutral-900 pt-16 rounded-t-lg w-full">
-        <h1 className="text-h4 font-heading">Why choose us?</h1>
-        <p className="text-balance pb-8">
+      <div className="bg-neutral-900 pt-16 rounded-t-lg w-full text-center">
+        <h1 className="text-h4 font-heading md:text-h3 md:mb-6">
+          Why choose us?
+        </h1>
+        <p className="text-balance pb-8 md:w-[50vw]">
           A large part of our role is choosing which particular coffees will be
           featured in our range. This means working closely with the best coffee
           growers to give you a more impactful experience on every level.
         </p>
       </div>
-      <div className="relative w-full">
+      <div className="relative w-full lg:px-24">
         <div className="absolute top-0 left-0 right-0 h-[50%] bg-gray-800 lg:h-[55%]"></div>
-
-        <div className="relative pt-10 px-6 z-10 lg:flex lg:flex-row lg:gap-8">
+        <div className="relative pt-10 px-6 z-10 lg:flex lg:flex-row lg:gap-12">
           {reasonsList.map((reason, index) => (
             <div
               key={index}
