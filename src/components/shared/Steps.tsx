@@ -17,10 +17,11 @@ export default function Steps({ isDarkTheme }: StepsProps) {
         return (
           <div
             key={index}
-            className={`grid place-items-center text-center gap-y-4 md:place-items-start md:text-left ${
+            className={`grid place-items-center text-center gap-y-4 md:place-items-start md:text-left md:pt-16 ${
               index < 2 && "md:border-t-2 md:border-secondary-accent"
-            }`}
+            } relative`}
           >
+            <span className="absolute h-8 w-8 border-2 border-primary-accent rounded-full transform -translate-y-1/2 bg-white"></span>
             <p className="font-heading text-h1 text-secondary-accent">
               {step.number}
             </p>

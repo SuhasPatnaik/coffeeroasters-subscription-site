@@ -7,7 +7,7 @@ export default function WhyChooseUs() {
         <h1 className="text-h4 font-heading md:text-h3 md:mb-6">
           Why choose us?
         </h1>
-        <p className="text-balance pb-8 md:w-[50vw]">
+        <p className="text-balance pb-8 md:w-[50vw] md:mx-auto">
           A large part of our role is choosing which particular coffees will be
           featured in our range. This means working closely with the best coffee
           growers to give you a more impactful experience on every level.
