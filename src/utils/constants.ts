@@ -88,6 +88,7 @@ export const hqLocations = [
 export const preferenceMenu = [
   {
     question: "How do you drink your coffee?",
+    type: "Preferences",
     options: [
       {
         name: "Capsule",
@@ -107,6 +108,7 @@ export const preferenceMenu = [
   },
   {
     question: "What type of coffee?",
+    type: "Bean Type",
     options: [
       {
         name: "Single Origin",
@@ -127,6 +129,7 @@ export const preferenceMenu = [
   },
   {
     question: "How much would you like?",
+    type: "Quantity",
     options: [
       {
         name: "250g",
@@ -147,6 +150,7 @@ export const preferenceMenu = [
   },
   {
     question: "Want us to grind them?",
+    type: "Grind Option",
     options: [
       {
         name: "Wholebean",
@@ -166,6 +170,7 @@ export const preferenceMenu = [
   },
   {
     question: "How often should we deliver?",
+    type: "Deliveries",
     options: [
       {
         name: "Every week",
