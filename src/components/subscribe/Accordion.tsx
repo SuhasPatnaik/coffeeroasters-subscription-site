@@ -16,7 +16,7 @@ export default function Accordion({
   return (
     <>
       <ExpandingBorderButton onClick={handleQuestionClick}>
-        <h1 className="font-heading text-h4 text-neutral-500 w-56 text-left">
+        <h1 className="font-heading text-h4 text-neutral-500 w-56 text-left lg:w-full lg:text-h3">
           {preference.question}
         </h1>
         <div>
@@ -29,25 +29,28 @@ export default function Accordion({
           />
         </div>
       </ExpandingBorderButton>
-      {expandAccordion &&
-        preference.options.map((option, index) => {
-          return (
-            <button
-              key={index}
-              className={`rounded-md py-8 px-6 flex flex-col gap-2 text-left cursor-pointer ${
-                selectedOptionIndex === index
-                  ? "bg-primary-accent text-neutral-200"
-                  : "bg-gray-200 hover:bg-secondary-accent text-neutral-900"
-              }`}
-              onClick={() =>
-                onOptionClick(selectedMenuIndex, index, option.name)
-              }
-            >
-              <h2 className="font-heading text-h4">{option.name}</h2>
-              <p>{option.description}</p>
-            </button>
-          );
-        })}
+      {expandAccordion && (
+        <div className="lg:flex lg:gap-8">
+          {preference.options.map((option, index) => {
+            return (
+              <button
+                key={index}
+                className={`rounded-md py-8 px-6 flex flex-col gap-2 text-left cursor-pointer lg:w-1/3 ${
+                  selectedOptionIndex === index
+                    ? "bg-primary-accent text-neutral-200"
+                    : "bg-gray-200 hover:bg-secondary-accent text-neutral-900"
+                }`}
+                onClick={() =>
+                  onOptionClick(selectedMenuIndex, index, option.name)
+                }
+              >
+                <h2 className="font-heading text-h4">{option.name}</h2>
+                <p>{option.description}</p>
+              </button>
+            );
+          })}
+        </div>
+      )}
     </>
   );
 }

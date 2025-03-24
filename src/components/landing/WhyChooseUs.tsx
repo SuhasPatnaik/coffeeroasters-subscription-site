@@ -4,10 +4,10 @@ export default function WhyChooseUs() {
   return (
     <section className="grid place-items-center text-center">
       <div className="bg-neutral-900 pt-16 rounded-t-lg w-full text-center">
-        <h1 className="text-h4 font-heading md:text-h3 md:mb-6">
+        <h1 className="text-h4 font-heading md:text-h3 md:mb-8">
           Why choose us?
         </h1>
-        <p className="text-balance pb-8 md:w-[50vw] md:mx-auto">
+        <p className="text-balance pb-8 md:w-[50vw] md:mx-auto md:pb-16">
           A large part of our role is choosing which particular coffees will be
           featured in our range. This means working closely with the best coffee
           growers to give you a more impactful experience on every level.
