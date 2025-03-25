@@ -8,7 +8,7 @@ export default function Footer() {
         alt="Coffee Roasters brand logo"
         className="place-self-center pb-12 md:pb-0"
       />
-      <nav className="flex flex-col gap-4 text-neutral-500 text-nav pb-12 md:flex-row md:pb-0 md:items-center">
+      <nav className="flex flex-col gap-4 text-neutral-500 text-nav pb-12 md:flex-row md:pb-0 md:items-center md:text-[1rem] md:gap-6">
         <Link to="/" className="uppercase hover:text-neutral-200">
           home
         </Link>

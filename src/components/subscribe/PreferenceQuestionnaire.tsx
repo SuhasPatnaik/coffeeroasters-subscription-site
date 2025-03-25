@@ -10,7 +10,6 @@ export default function PreferenceQuestionnaire({
   const accordionRefs = useRef([]);
 
   const isCapsule = selectedOptions?.[0]?.optionName === "Capsule";
-  console.log("isCapsule", isCapsule);
 
   useEffect(() => {
     const handleResize = () => {

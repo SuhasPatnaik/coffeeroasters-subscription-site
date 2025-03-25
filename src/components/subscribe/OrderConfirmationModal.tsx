@@ -4,11 +4,30 @@ import OrderSummaryText from "./OrderSummaryText";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
+import { preferenceMenu } from "../../utils/constants";
+
 export default function OrderConfirmationModal({
   selectedPreferences,
   onClose,
 }) {
   const handleCheckout = () => {};
+
+  const quantity =
+    selectedPreferences[2].optionName === "250g"
+      ? "quarter"
+      : selectedPreferences[2].optionName === "500g"
+      ? "half"
+      : "full";
+
+  const frequency = selectedPreferences[4].optionName;
+
+  const totalAmount = preferenceMenu
+    .at(-1)
+    .options.find((option) => option.name === frequency).subscriptionCost[
+    quantity
+  ];
+
+  console.log("totalAmount", totalAmount);
 
   return (
     <>
@@ -33,7 +52,7 @@ export default function OrderConfirmationModal({
               also be redeemed at the checkout.{" "}
             </p>
             <Button onClick={() => handleCheckout} className="w-full">
-              Checkout - ${} / mo
+              Checkout - ${totalAmount} / mo
             </Button>
           </div>
         </div>
