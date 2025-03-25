@@ -6,6 +6,7 @@ export default function Accordion({
   onOptionClick,
   selectedMenuIndex,
   selectedOptionIndex,
+  ref,
 }) {
   const [expandAccordion, setExpandAccordion] = useState(false);
 
@@ -16,7 +17,10 @@ export default function Accordion({
   return (
     <>
       <ExpandingBorderButton onClick={handleQuestionClick}>
-        <h1 className="font-heading text-h4 text-neutral-500 w-56 text-left lg:w-full lg:text-h3">
+        <h1
+          className="font-heading text-h4 text-neutral-500 w-56 text-left lg:w-full lg:text-h3"
+          ref={ref}
+        >
           {preference.question}
         </h1>
         <div>

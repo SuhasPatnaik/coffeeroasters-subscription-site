@@ -1,14 +1,12 @@
+import { useState } from "react";
 import Button from "../shared/Button";
 import OrderConfirmationModal from "./OrderConfirmationModal";
-import { useState } from "react";
 import OrderSummaryText from "./OrderSummaryText";
 
 export default function OrderSummary({ selectedPreferences }) {
   const [showModal, setShowModal] = useState(false);
 
-  // Added this to check if the button click function is working
   const handleCreatePlan = () => {
-    console.log("Button clicked");
     setShowModal(true);
   };
 
