@@ -9,6 +9,9 @@ export default function PreferenceQuestionnaire({
   const [isLgScreen, setIsLgScreen] = useState(window.innerWidth >= 1024);
   const accordionRefs = useRef([]);
 
+  const isCapsule = selectedOptions?.[0]?.optionName === "Capsule";
+  console.log("isCapsule", isCapsule);
+
   useEffect(() => {
     const handleResize = () => {
       setIsLgScreen(window.innerWidth >= 1024);
@@ -50,6 +53,7 @@ export default function PreferenceQuestionnaire({
               selectedMenuIndex={index}
               selectedOptionIndex={selectedOptions[index]?.optionIndex ?? null}
               ref={(ele) => (accordionRefs.current[index] = ele)}
+              isCapsuleSelected={isCapsule}
             />
           );
         })}

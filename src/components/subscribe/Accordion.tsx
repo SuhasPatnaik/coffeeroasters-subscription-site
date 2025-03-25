@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ExpandingBorderButton from "./ExpandingBorderButton";
 
 export default function Accordion({
@@ -7,10 +7,22 @@ export default function Accordion({
   selectedMenuIndex,
   selectedOptionIndex,
   ref,
+  isCapsuleSelected,
 }) {
   const [expandAccordion, setExpandAccordion] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(false);
+
+  useEffect(() => {
+    if (isCapsuleSelected && preference.type === "Grind Option") {
+      setExpandAccordion(false);
+      setIsDisabled(true);
+    } else {
+      setIsDisabled(false);
+    }
+  }, [isCapsuleSelected, preference.type]);
 
   const handleQuestionClick = () => {
+    if (isDisabled) return;
     setExpandAccordion((prev) => !prev);
   };
 
@@ -18,7 +30,9 @@ export default function Accordion({
     <>
       <ExpandingBorderButton onClick={handleQuestionClick}>
         <h1
-          className="font-heading text-h4 text-neutral-500 w-56 text-left lg:w-full lg:text-h3"
+          className={`font-heading text-h4 text-neutral-500 w-56 text-left lg:w-full lg:text-h3 ${
+            isDisabled && "opacity-50"
+          }`}
           ref={ref}
         >
           {preference.question}
@@ -29,7 +43,9 @@ export default function Accordion({
             alt="Arrow indicating if the accordion is open or close"
             className={`transition-transform ${
               expandAccordion ? "rotate-180" : ""
-            }`}
+            }
+            ${isDisabled && "opacity-50"}
+            `}
           />
         </div>
       </ExpandingBorderButton>
