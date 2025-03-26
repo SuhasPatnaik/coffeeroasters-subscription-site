@@ -6,10 +6,15 @@ import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 import { preferenceMenu } from "../../utils/constants";
 
+interface OrderConfirmationModalProps {
+  selectedPreferences: Record<number, { optionName: string }>;
+  onClose: () => void;
+}
+
 export default function OrderConfirmationModal({
   selectedPreferences,
   onClose,
-}) {
+}: OrderConfirmationModalProps) {
   const handleCheckout = () => {};
 
   const quantity =

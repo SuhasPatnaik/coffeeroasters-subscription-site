@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router";
 
-export default function NavMenuModal({ onClose }) {
+export default function NavMenuModal({ onClose }: { onClose: () => void }) {
   useEffect(() => {
     document.body.style.overflow = "hidden";
 

@@ -1,14 +1,38 @@
 import { useEffect, useState } from "react";
 import ExpandingBorderButton from "./ExpandingBorderButton";
 
+interface Option {
+  name: string;
+  description: string;
+}
+
+interface Preference {
+  type: string;
+  question: string;
+  options: Option[];
+}
+
+interface AccordionProps {
+  preference: Preference;
+  onOptionClick: (
+    menuIndex: number,
+    optionIndex: number,
+    optionName: string
+  ) => void;
+  selectedMenuIndex: number;
+  selectedOptionIndex: number;
+  isCapsuleSelected: boolean;
+  ref?: React.Ref<HTMLHeadingElement>;
+}
+
 export default function Accordion({
   preference,
   onOptionClick,
   selectedMenuIndex,
   selectedOptionIndex,
-  ref,
   isCapsuleSelected,
-}) {
+  ref,
+}: AccordionProps) {
   const [expandAccordion, setExpandAccordion] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
 

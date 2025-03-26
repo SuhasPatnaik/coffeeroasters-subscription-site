@@ -1,20 +1,22 @@
-import { useState } from "react";
+import { useState, MouseEvent, ReactNode } from "react";
 
-const ExpandingBorderButton = ({ onClick, children }) => {
+interface ExpandingBorderButtonProps {
+  onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
+  children: ReactNode;
+}
+
+const ExpandingBorderButton = ({
+  onClick,
+  children,
+}: ExpandingBorderButtonProps) => {
   const [isHovered, setIsHovered] = useState(false);
-
-  const handleClick = (e) => {
-    if (onClick) {
-      onClick(e);
-    }
-  };
 
   return (
     <button
       className="relative w-full pb-2 cursor-pointer flex items-center justify-between group"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={handleClick}
+      onClick={onClick}
     >
       {children}
 
