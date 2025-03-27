@@ -1,4 +1,4 @@
-import { hqLocations } from "../../utils/constants";
+import { hqLocations } from "../../utils/data";
 
 export default function Headquarters() {
   return (

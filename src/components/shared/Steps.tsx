@@ -1,4 +1,4 @@
-import { stepsList } from "../../utils/constants";
+import { stepsList } from "../../utils/data";
 
 interface StepsProps {
   isDarkTheme?: boolean;

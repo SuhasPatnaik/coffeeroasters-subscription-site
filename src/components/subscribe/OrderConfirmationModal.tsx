@@ -4,7 +4,7 @@ import OrderSummaryText from "./OrderSummaryText";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
-import { preferenceMenu } from "../../utils/constants";
+import { getTotalShipmentCost } from "../../utils/pricing";
 
 interface OrderConfirmationModalProps {
   selectedPreferences: Record<number, { optionName: string }>;
@@ -17,20 +17,14 @@ export default function OrderConfirmationModal({
 }: OrderConfirmationModalProps) {
   const handleCheckout = () => {};
 
-  const quantity =
-    selectedPreferences[2].optionName === "250g"
-      ? "quarter"
-      : selectedPreferences[2].optionName === "500g"
-      ? "half"
-      : "full";
+  const quantity = selectedPreferences[2].optionName;
 
   const frequency = selectedPreferences[4].optionName;
 
-  const totalAmount = preferenceMenu
-    .at(-1)
-    .options.find((option) => option.name === frequency).subscriptionCost[
-    quantity
-  ];
+  console.log("quantity", quantity);
+  console.log("frequency", frequency);
+
+  const totalAmount = getTotalShipmentCost(quantity, frequency);
 
   console.log("totalAmount", totalAmount);
 

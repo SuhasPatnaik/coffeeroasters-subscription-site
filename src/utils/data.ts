@@ -175,30 +175,33 @@ export const preferenceMenu = [
       {
         name: "Every week",
         description: "$7.20 per shipment. Includes free first-class shipping.",
-        subscriptionCost: {
-          quarter: "28.80",
-          half: "52.00",
-          full: "88.00",
-        },
       },
       {
         name: "Every 2 weeks",
         description: "$9.60 per shipment. Includes free priority shipping.",
-        subscriptionCost: {
-          quarter: "19.20",
-          half: "35.00",
-          full: "22.00",
-        },
       },
       {
         name: "Every month",
         description: "$12.00 per shipment. Includes free priority shipping.",
-        subscriptionCost: {
-          quarter: "12.00",
-          half: "22.00",
-          full: "42.00",
-        },
       },
     ],
   },
 ];
+
+export const pricingTable: Record<string, Record<string, number>> = {
+  "250g": {
+    "Every week": 7.2,
+    "Every 2 weeks": 9.6,
+    "Every month": 12.0,
+  },
+  "500g": {
+    "Every week": 13.0,
+    "Every 2 weeks": 17.5,
+    "Every month": 22.0,
+  },
+  "1000g": {
+    "Every week": 22.0,
+    "Every 2 weeks": 32.0,
+    "Every month": 42.0,
+  },
+};

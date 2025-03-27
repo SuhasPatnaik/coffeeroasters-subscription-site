@@ -1,4 +1,4 @@
-import { collectionList } from "../../utils/constants";
+import { collectionList } from "../../utils/data";
 
 export default function Collection() {
   return (

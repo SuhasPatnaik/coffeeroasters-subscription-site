@@ -1,4 +1,4 @@
-import { reasonsList } from "../../utils/constants";
+import { reasonsList } from "../../utils/data";
 
 export default function WhyChooseUs() {
   return (

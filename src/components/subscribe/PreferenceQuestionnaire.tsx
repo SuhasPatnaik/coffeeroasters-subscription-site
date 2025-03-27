@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { preferenceMenu } from "../../utils/constants";
+import { preferenceMenu } from "../../utils/data";
 import Accordion from "./Accordion";
 
 export default function PreferenceQuestionnaire({
