@@ -1,13 +1,23 @@
 import { useEffect, useRef, useState } from "react";
 import { preferenceMenu } from "../../utils/data";
 import Accordion from "./Accordion";
+import { SelectedPreferences } from "../../utils/types";
+
+interface PreferenceQuestionnaireProps {
+  onOptionClick: (
+    menuIndex: number,
+    optionIndex: number,
+    optionName: string
+  ) => void;
+  selectedOptions: SelectedPreferences;
+}
 
 export default function PreferenceQuestionnaire({
   onOptionClick,
   selectedOptions,
-}) {
+}: PreferenceQuestionnaireProps) {
   const [isLgScreen, setIsLgScreen] = useState(window.innerWidth >= 1024);
-  const accordionRefs = useRef([]);
+  const accordionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const isCapsule = selectedOptions?.[0]?.optionName === "Capsule";
 
@@ -21,7 +31,7 @@ export default function PreferenceQuestionnaire({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const scrollToAccordion = (index) => {
+  const scrollToAccordion = (index: number) => {
     accordionRefs.current[index]?.scrollIntoView({
       behavior: "smooth",
       block: "start",
@@ -51,7 +61,9 @@ export default function PreferenceQuestionnaire({
               onOptionClick={onOptionClick}
               selectedMenuIndex={index}
               selectedOptionIndex={selectedOptions[index]?.optionIndex ?? null}
-              ref={(ele) => (accordionRefs.current[index] = ele)}
+              ref={(ele) => {
+                if (ele) accordionRefs.current[index] = ele;
+              }}
               isCapsuleSelected={isCapsule}
             />
           );

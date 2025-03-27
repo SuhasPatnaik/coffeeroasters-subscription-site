@@ -1,10 +1,10 @@
 import { pricingTable } from "./data";
 
-export const getTotalShipmentCost = (weight: string, frequency: string) => {
+export const getTotalShipmentCost = (
+  weight: string,
+  frequency: string
+): { pricePerShipment: number; monthlyCost: number } => {
   const weightPricing = pricingTable[weight];
-
-  if (!weightPricing) return "Invalid weight selection";
-  if (!weightPricing[frequency]) return "Invalid frequency selection";
 
   const pricePerShipment = weightPricing[frequency];
 
@@ -17,5 +17,5 @@ export const getTotalShipmentCost = (weight: string, frequency: string) => {
 
   const monthlyCost = pricePerShipment * frequencyMultipliers[frequency];
 
-  return monthlyCost;
+  return { pricePerShipment, monthlyCost };
 };

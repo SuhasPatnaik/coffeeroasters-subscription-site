@@ -2,8 +2,15 @@ import { useState } from "react";
 import Button from "../shared/Button";
 import OrderConfirmationModal from "./OrderConfirmationModal";
 import OrderSummaryText from "./OrderSummaryText";
+import { SelectedPreferences } from "../../utils/types";
 
-export default function OrderSummary({ selectedPreferences }) {
+interface OrderSummaryProps {
+  selectedPreferences: SelectedPreferences;
+}
+
+export default function OrderSummary({
+  selectedPreferences,
+}: OrderSummaryProps) {
   const [showModal, setShowModal] = useState(false);
 
   const handleCreatePlan = () => {

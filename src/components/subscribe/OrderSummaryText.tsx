@@ -1,6 +1,14 @@
-export default function OrderSummaryText({ selectedPreferences }) {
+import { SelectedPreferences } from "../../utils/types";
+
+interface OrderSummaryTextProps {
+  selectedPreferences: SelectedPreferences;
+}
+
+export default function OrderSummaryText({
+  selectedPreferences,
+}: OrderSummaryTextProps) {
   console.log(selectedPreferences);
-  const getPreferenceText = (index) =>
+  const getPreferenceText = (index: number) =>
     selectedPreferences?.[index] ? (
       <span className="text-primary-accent inline-block">
         {selectedPreferences[index].optionName}
