@@ -31,7 +31,7 @@ export default function OrderSummary({
         </p>
       </div>
       <div className="text-center my-16">
-        <Button onClick={handleCreatePlan}>Create my plan!</Button>
+        <Button onClick={handleCreatePlan}>Create my plan</Button>
       </div>
 
       {showModal && (

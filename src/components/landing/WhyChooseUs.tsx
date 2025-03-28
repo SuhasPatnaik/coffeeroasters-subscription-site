@@ -19,9 +19,12 @@ export default function WhyChooseUs() {
           {reasonsList.map((reason, index) => (
             <div
               key={index}
-              className="bg-primary-accent flex flex-col gap-8 pt-16 pb-12 rounded-lg mb-6 px-12"
+              className="bg-primary-accent flex flex-col gap-8 pt-16 pb-12 rounded-lg mb-6 px-12 group"
             >
-              <img src={reason.imgUrl} className="self-center" />
+              <img
+                src={reason.imgUrl}
+                className="self-center group-hover:animate-wiggle"
+              />
               <h2 className="text-h4 font-heading">{reason.name}</h2>
               <p className="text-balance">{reason.description}</p>
             </div>

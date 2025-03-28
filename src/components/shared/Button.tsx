@@ -19,6 +19,11 @@ export default function Button({
       {...props}
     >
       {children}
+      <img
+        src="/images/shared/right-arrow.svg"
+        alt="Right arrow"
+        className="ml-2 inline-block animate-slide-x"
+      />
     </button>
   );
 }
