@@ -9,11 +9,14 @@ export default function Collection() {
       <div className="md:flex md:px-36">
         {collectionList.map((collection, index) => {
           return (
-            <div className="flex flex-col gap-4 mt-12 md:-mt-12" key={index}>
+            <div
+              className="flex flex-col gap-4 mt-12 md:-mt-12 group"
+              key={index}
+            >
               <img
                 src={collection.imgUrl}
                 alt="Coffeeroasters collection image"
-                className="h-32 self-center"
+                className="h-32 self-center group-hover:animate-wiggle"
               />
               <h2 className="text-h4 font-heading text-neutral-900">
                 {collection.name}
