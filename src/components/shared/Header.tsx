@@ -19,16 +19,20 @@ export default function Header() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {});
+
   const handleClose = () => {
     setShowNavMenu(false);
   };
 
   return (
     <header className="flex justify-between">
-      <img
-        src="/images/shared/desktop/logo.svg"
-        alt="Coffee Roasters brand logo"
-      />
+      <Link to="/">
+        <img
+          src="/images/shared/desktop/logo.svg"
+          alt="Coffee Roasters brand logo"
+        />
+      </Link>
       {isMobileScreen ? (
         <button className="cursor-pointer" onClick={() => setShowNavMenu(true)}>
           <img src="/images/shared/mobile/icon-hamburger.svg" />

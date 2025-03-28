@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "tailwindcss-animated";
 
 @theme {
   /* Custom color paltette */
@@ -30,6 +31,23 @@
   --text-nav--font-weight: 700;
 
   --font-heading: "Fraunces", serif;
+
+  /* Fade-Up Animation */
+  --animate-fade-up: fade-up 0.7s ease-in-out;
+
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    80% {
+      opacity: 1;
+      transform: translateY(-14%); /* Almost at final position */
+    }
+    100% {
+      transform: translateY(-16.666%); /* Smooth landing */
+    }
+  }
 }
 
 html {
