@@ -26,6 +26,9 @@ export default function Hero() {
         >
           Create your plan
         </Button>
+        <button className="self-start cursor-pointer text-[1.1rem] tracking-widest uppercase p-1 hover:border-1">
+          Newsletter - Sign Up
+        </button>
       </div>
     </section>
   );
