@@ -5,16 +5,20 @@ const signUpAction = async (previousState, formData) => {
   const firstName = formData.get("firstname").trim();
   const email = formData.get("email").trim();
 
+  const errors = {};
+
   if (firstName.length < 3) {
-    return {
-      status: "error",
-      message: "First name must be at least 3 characters.",
-    };
+    errors.firstname = "First name must be at least 3 characters.";
   }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   if (!emailRegex.test(email)) {
-    return { status: "error", message: "Please enter a valid email address." };
+    errors.email = "Please enter a valid email address.";
+  }
+
+  if (Object.keys(errors).length > 0) {
+    return { status: "error", errors };
   }
 
   await new Promise((resolve) => setTimeout(resolve, 1500)); // Simulating a slow db fetch request
@@ -37,9 +41,14 @@ export default function NewsletterSignUp() {
           type="text"
           name="firstname"
           id="firstname"
-          className="bg-gray-300 border-1 border-gray-700"
+          className={`bg-gray-300 border-1 ${
+            state?.errors?.firstname ? "border-red-500" : "border-gray-700"
+          }`}
           required
         />
+        {state?.errors?.firstname && (
+          <p className="text-red-600 text-sm mt-2">{state.errors.firstname}</p>
+        )}
       </div>
       <div>
         <label htmlFor="email">Email: </label>
@@ -47,9 +56,14 @@ export default function NewsletterSignUp() {
           type="email"
           name="email"
           id="email"
-          className="bg-gray-300 border-1 border-gray-700"
+          className={`bg-gray-300 border-1 ${
+            state?.errors?.email ? "border-red-500" : "border-gray-700"
+          }`}
           required
         />
+        {state?.errors?.email && (
+          <p className="text-red-600 text-sm mt-2">{state.errors.email}</p>
+        )}
       </div>
       <div className="flex gap-2 items-center">
         <input type="checkbox" className="text-neutral-900" />
@@ -60,12 +74,8 @@ export default function NewsletterSignUp() {
       <Button className="text-neutral-100" disabled={isPending}>
         {isPending ? "Signing up..." : "Sign Up"}
       </Button>
-      {state?.message && (
-        <p
-          className={`text-sm mt-2 ${
-            state.status === "error" ? "text-red-600" : "text-green-600"
-          }`}
-        >
+      {state?.status === "success" && (
+        <p className="text-green-600 text-sm mt-4" role="alert">
           {state.message}
         </p>
       )}
