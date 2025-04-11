@@ -26,7 +26,10 @@ export default function Hero() {
         >
           Create your plan
         </Button>
-        <button className="self-start cursor-pointer text-[1.1rem] tracking-widest uppercase p-1 hover:border-1">
+        <button
+          className="self-start cursor-pointer text-[1.1rem] tracking-widest uppercase p-2 hover:border-1"
+          onClick={() => navigate("/newsletter/sign-up")}
+        >
           Newsletter - Sign Up
         </button>
       </div>
